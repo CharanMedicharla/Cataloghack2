@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop & Soil Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Crop & Soil Management System</h1>
+    <nav>
+      <a href="#crop-selection">Crop Selection</a>
+      <a href="#soil-management">Soil Management</a>
+      <a href="#disease-identification">Disease Identification</a>
+    </nav>
+  </header>
+
+  <section id="crop-selection">
+    <h2>Crop Selection</h2>
+    <p>Input your soil type, weather conditions, and get crop recommendations.</p>
+    <form id="cropForm">
+      <label for="soil-type">Soil Type:</label>
+      <select id="soil-type" name="soil-type">
+        <option value="sandy">Sandy</option>
+        <option value="loamy">Loamy</option>
+        <option value="clay">Clay</option>
+      </select>
+      <label for="climate">Climate:</label>
+      <select id="climate" name="climate">
+        <option value="dry">Dry</option>
+        <option value="humid">Humid</option>
+        <option value="temperate">Temperate</option>
+      </select>
+      <button type="button" onclick="getCropRecommendation()">Get Recommendation</button>
+    </form>
+    <p id="crop-output"></p>
+  </section>
+
+  <section id="soil-management">
+    <h2>Soil Management</h2>
+    <p>Check soil health and get recommendations for better soil management.</p>
+    <form id="soilForm">
+      <label for="ph">Soil pH:</label>
+      <input type="number" id="ph" name="ph" step="0.1" min="0" max="14">
+      <button type="button" onclick="getSoilManagement()">Get Soil Advice</button>
+    </form>
+    <p id="soil-output"></p>
+  </section>
+
+  <section id="disease-identification">
+    <h2>Disease Identification</h2>
+    <p>Upload an image of your crops to identify potential diseases.</p>
+    <input type="file" id="disease-image" accept="image/*">
+    <button type="button">Upload Image</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Crop & Soil Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
